@@ -1,0 +1,180 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-size: 14px;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-200 {
+  font-weight: 200;
+}
+
+.text-700 {
+  font-weight: 700;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*.button {
+    padding: 5px;
+    border: 2px solid black;
+    font-size: ;
+}*/
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: clamp(1.5rem, -0.05rem + 3.5vw, 2.5rem);
+  line-height: 1.15;
+}
+h1 .nxt-line {
+  font-weight: 400;
+}
+
+main {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+main .main__text {
+  display: grid;
+  justify-items: center;
+}
+main p {
+  font-size: 2rem;
+}
+main .button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.3rem;
+  border: 2px solid black;
+  font-size: 1rem;
+  letter-spacing: -1px;
+  color: #000;
+  border-radius: 0.5rem;
+}
+main .button:hover {
+  background-color: #000;
+  color: #fff;
+}
+main .button:hover .fa-arrow-right {
+  transform: rotate(90deg);
+}
+@media (min-width: 63rem) {
+  main .button {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+main .fa-arrow-right {
+  margin-left: 0.75rem;
+}
+
+nav {
+  flex: 0 0 auto;
+  background-color: #000;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 4px solid yellow;
+}
+@media (min-width: 57rem) {
+  nav {
+    padding: 1rem 6rem;
+  }
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.7rem;
+  letter-spacing: -2px;
+  position: relative;
+  z-index: 100;
+}
+
+.primary-navigation {
+  display: flex;
+  gap: 2rem;
+}
+.primary-navigation a {
+  display: block;
+  color: #fff;
+  font-weight: 200;
+  font-size: 1rem;
+}
+.primary-navigation a:hover {
+  color: yellow;
+}
+@media (max-width: 57rem) {
+  .primary-navigation {
+    display: none;
+  }
+}
+
+.expanded {
+  display: block;
+  position: fixed;
+  inset: 0 0 0 20%;
+  background-color: #000;
+  padding: 3rem 0;
+}
+.expanded a {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+.expanded a:hover {
+  border-bottom: 1px solid rgba(255, 255, 0, 0.5);
+}
+
+.collapsed {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+@media (max-width: 57rem) {
+  .mobile-nav {
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+}
+.mobile-nav i {
+  color: #fff;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=main.css.map */
