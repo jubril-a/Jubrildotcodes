@@ -109,7 +109,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 4px solid yellow;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -259,4 +258,61 @@ h2 {
   height: 320px;
   border-radius: 160px;
   background-color: yellow;
+}
+
+.project-wrapper {
+  background-color: aliceblue;
+}
+
+.projects {
+  max-width: 1024px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.nav-buttons button {
+  background-color: transparent;
+  border: 0;
+  padding: 0.7rem 2.2rem;
+}
+.nav-buttons button.active {
+  background-color: yellow;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projects-container .project {
+  height: 320px;
+  flex: 1 0 320px;
+}
+.projects-container .project:nth-child(odd) {
+  background-color: yellow;
+}
+.projects-container .project:nth-child(even) {
+  background-color: rgb(149, 149, 22);
+}
+
+.project-info {
+  text-align: center;
+  display: grid;
+  gap: 5rem;
+  display: none;
+}
+.project-info .project-links {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.project-info .project-link {
+  background-color: #fff;
+  padding: 0.8rem 1rem;
+  display: block;
 }/*# sourceMappingURL=main.css.map */
