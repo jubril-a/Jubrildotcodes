@@ -1,0 +1,78 @@
+h2 {
+    text-align: center;
+    margin: 3rem;
+}
+
+.about {
+    padding: 2rem;
+    max-width: 1024px;
+    margin: auto;
+
+    .about__info {
+        display: grid;
+        justify-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+
+        @media (min-width: 50rem) {
+            grid-template-columns: 1fr 1fr;
+            max-width: fit-content;
+            margin-inline: auto;
+        }
+
+        @media (min-width: 71.5rem) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        max-width: 280px;
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .icon-container {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 4rem;
+        background-color: yellow;
+    }
+}
+
+.about__xtra {
+    display: grid;
+    gap: 4rem;
+
+    @media (min-width: 920px) {
+        grid-template-columns: 1fr 1fr;
+
+        .me__description {
+            text-align: center;
+        }
+    }
+}
+
+.me__info {
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+}
+
+.me__skills {
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+}
+
+.me__image {
+    width: 320px;
+    height: 320px;
+    border-radius: 160px;
+    background-color: yellow;
+}
