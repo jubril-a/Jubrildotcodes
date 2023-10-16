@@ -119,6 +119,12 @@ nav {
   }
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
 .logo {
   color: #fff;
   font-size: 1.7rem;
@@ -405,6 +411,7 @@ footer .to-top {
   font-size: 1.5rem;
   position: absolute;
   top: -25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .social-icons {

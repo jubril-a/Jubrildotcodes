@@ -78,6 +78,12 @@ nav {
     }
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+} 
+
 .logo {
     color: #fff;
     font-size: 1.7rem;

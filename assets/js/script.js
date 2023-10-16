@@ -1,3 +1,4 @@
+let navBar = document.querySelector(".nav-bar");
 let mobileNav = document.querySelector('.mobile-nav');
 let mobileNavIcon = document.querySelector('.mobile-nav-icon');
 let primaryNav = document.querySelector('.primary-navigation');
@@ -30,3 +31,14 @@ for (let project of projects) {
         projectInfo.style.display = 'none';
     })
 }*/
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > window.innerHeight) {
+        navBar.classList.add('sticky');
+    }
+
+    if (window.scrollY < window.innerHeight) {
+        navBar.classList.remove('sticky');
+    }
+})
+
