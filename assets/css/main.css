@@ -345,4 +345,47 @@ h2 {
   height: 180px;
   background-color: yellow;
   margin-bottom: 1rem;
+}
+
+.contact-wrapper {
+  background-color: black;
+}
+
+.contact-section {
+  padding: 2rem;
+}
+.contact-section h2 {
+  color: #fff;
+}
+.contact-section p {
+  text-align: center;
+  color: aqua;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: grid;
+  max-width: 500px;
+  margin: auto;
+  gap: 0.25rem;
+}
+.contact-form input:not([type=submit]) {
+  height: 3rem;
+  width: 100%;
+  border: 0;
+  font-size: 1rem;
+}
+.contact-form input[type=submit] {
+  height: 3rem;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.contact-form input[type=submit]:hover {
+  background-color: aqua;
+  color: #000;
+}
+.contact-form textarea {
+  height: 150px;
+  font-size: 1rem;
 }/*# sourceMappingURL=main.css.map */
