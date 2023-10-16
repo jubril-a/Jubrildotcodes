@@ -273,16 +273,17 @@ h2 {
 .nav-buttons {
   display: flex;
   gap: 1rem;
+  align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
 }
 .nav-buttons button {
   background-color: transparent;
   border: 0;
-  padding: 0.7rem 2.2rem;
 }
 .nav-buttons button.active {
   background-color: yellow;
+  padding: 0.7rem 2.2rem;
 }
 
 .projects-container {
@@ -315,4 +316,33 @@ h2 {
   background-color: #fff;
   padding: 0.8rem 1rem;
   display: block;
+}
+
+.blogs {
+  padding: 2rem;
+  gap: 2rem;
+  display: grid;
+  margin: auto;
+  justify-items: center;
+}
+@media (min-width: 720px) and (max-width: 1120px) {
+  .blogs {
+    grid-template-columns: 1fr 1fr;
+    max-width: 690px;
+  }
+}
+@media (min-width: 1120px) {
+  .blogs {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1120px;
+  }
+}
+.blogs .blog {
+  max-width: 320px;
+}
+.blogs .blog__image {
+  width: 100%;
+  height: 180px;
+  background-color: yellow;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=main.css.map */

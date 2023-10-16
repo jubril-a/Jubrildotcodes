@@ -11,16 +11,18 @@
 .nav-buttons {
     display: flex;
     gap: 1rem;
+    align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
 
     button {
         background-color: transparent;
         border: 0;
-        padding: .7rem 2.2rem;
+        //padding: .7rem 2.2rem;
         
         &.active {
             background-color: yellow;
+            padding: .7rem 2.2rem;
         }
     }
 }
