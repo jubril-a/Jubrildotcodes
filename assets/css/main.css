@@ -352,7 +352,7 @@ h2 {
 }
 
 .contact-section {
-  padding: 2rem;
+  padding: 5rem;
 }
 .contact-section h2 {
   color: #fff;
@@ -388,4 +388,32 @@ h2 {
 .contact-form textarea {
   height: 150px;
   font-size: 1rem;
+}
+
+footer {
+  padding: 5rem;
+  background-color: yellow;
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+  position: relative;
+}
+footer .to-top {
+  padding: 1rem;
+  background-color: #000;
+  color: aqua;
+  font-size: 1.5rem;
+  position: absolute;
+  top: -25px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 2rem;
+}
+.social-icons .icon {
+  padding: 1rem;
+  background-color: #000;
+  color: aqua;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=main.css.map */
