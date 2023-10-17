@@ -42,6 +42,10 @@ h2 {
         height: 8rem;
         border-radius: 4rem;
         background-color: yellow;
+
+        * {
+            font-size: 3rem;
+        }
     }
 }
 
@@ -71,8 +75,8 @@ h2 {
 }
 
 .me__image {
-    width: 320px;
-    height: 320px;
+    width: min(100%, 320px);
+    aspect-ratio: 1 / 1;
     border-radius: 160px;
     background-color: yellow;
 }

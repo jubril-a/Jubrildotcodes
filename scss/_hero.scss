@@ -9,16 +9,6 @@
 
 // ***** MAIN ***** //
 
-h1 {
-    font-weight: 200;
-    font-size: clamp(1.5rem, calc(-0.05rem + 3.5vw), 2.5rem);
-    line-height: 1.15;
-
-    .nxt-line {
-        font-weight: 400;
-    }
-}
-
 main {
     flex: 1 1 auto;
     padding: 1rem;
@@ -69,7 +59,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    //border-bottom: 4px solid yellow;
     position: sticky;
     top: 0;
 
@@ -82,6 +71,8 @@ nav {
     position: fixed;
     top: 0;
     width: 100vw;
+    border-bottom: 4px solid yellow;
+    z-index: 100;
 } 
 
 .logo {

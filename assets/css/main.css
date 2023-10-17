@@ -56,15 +56,6 @@ a {
   flex-direction: column;
 }
 
-h1 {
-  font-weight: 200;
-  font-size: clamp(1.5rem, -0.05rem + 3.5vw, 2.5rem);
-  line-height: 1.15;
-}
-h1 .nxt-line {
-  font-weight: 400;
-}
-
 main {
   flex: 1 1 auto;
   padding: 1rem;
@@ -123,6 +114,8 @@ nav {
   position: fixed;
   top: 0;
   width: 100vw;
+  border-bottom: 4px solid yellow;
+  z-index: 100;
 }
 
 .logo {
@@ -233,6 +226,9 @@ h2 {
   border-radius: 4rem;
   background-color: yellow;
 }
+.about .icon-container * {
+  font-size: 3rem;
+}
 
 .about__xtra {
   display: grid;
@@ -260,8 +256,8 @@ h2 {
 }
 
 .me__image {
-  width: 320px;
-  height: 320px;
+  width: min(100%, 320px);
+  aspect-ratio: 1/1;
   border-radius: 160px;
   background-color: yellow;
 }
@@ -282,6 +278,7 @@ h2 {
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
+  padding: 0;
 }
 .nav-buttons button {
   background-color: transparent;
@@ -298,13 +295,17 @@ h2 {
 }
 .projects-container .project {
   height: 320px;
-  flex: 1 0 320px;
+  flex: 1 0 min(320px, 100%);
 }
 .projects-container .project:nth-child(odd) {
   background-color: yellow;
 }
 .projects-container .project:nth-child(even) {
   background-color: rgb(149, 149, 22);
+}
+
+.project:hover .project-info {
+  display: grid;
 }
 
 .project-info {
@@ -351,6 +352,8 @@ h2 {
   height: 180px;
   background-color: yellow;
   margin-bottom: 1rem;
+  background-image: url("/assets/images/blog-1.jpg");
+  background-size: cover;
 }
 
 .contact-wrapper {
@@ -358,10 +361,13 @@ h2 {
 }
 
 .contact-section {
-  padding: 5rem;
+  padding: 2rem 2rem 5rem;
 }
 .contact-section h2 {
   color: #fff;
+}
+.contact-section h2::after {
+  background-color: #fff;
 }
 .contact-section p {
   text-align: center;
@@ -397,7 +403,7 @@ h2 {
 }
 
 footer {
-  padding: 5rem;
+  padding: 5rem 2rem 2rem;
   background-color: yellow;
   display: grid;
   gap: 2rem;
@@ -423,4 +429,41 @@ footer .to-top {
   background-color: #000;
   color: aqua;
   font-size: 1.5rem;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: clamp(1.5rem, -0.05rem + 3.5vw, 2.5rem);
+  line-height: 1.15;
+}
+h1 .nxt-line {
+  font-weight: 400;
+}
+
+h2 {
+  font-size: clamp(2rem, 2rem + 2vw, 3rem);
+  font-weight: 700;
+  display: grid;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin: 3rem auto;
+  justify-items: center;
+}
+h2::after {
+  content: "";
+  width: 50%;
+  height: 5px;
+  background-color: #000;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 920px) {
+  .padding-920px {
+    padding-block: 5rem;
+  }
 }/*# sourceMappingURL=main.css.map */

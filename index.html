@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jubril Codes</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6d54de810b.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="assets/js/script.js" defer></script>
 </head>
 <body>
@@ -19,17 +21,17 @@
                 <div class="main__text">
                     <h1 class="text-center">Hello, I'm <span class="text-700">Jubril Abdulsalam</span>.<br>
                         <span class="nxt-line">I'm a frontend web developer</span></h1>
-                    <a class="button" href="#">View my work<i class="fa-solid fa-arrow-right"></i></a>
+                    <a class="button" href="#portfolio">View my work<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </main>
             <nav class="nav-bar">
                 <p class="logo text-200"><span class="text-700">Jubril</span>.codes</p>
                 <ul class="primary-navigation">
-                    <a href="">HOME</a>
-                    <a href="">ABOUT</a>
-                    <a href="">PORTFOLIO</a>
-                    <a href="">BLOG</a>
-                    <a href="">CONTACT</a>  
+                    <a href="#top">HOME</a>
+                    <a href="#about">ABOUT</a>
+                    <a href="#portfolio">PORTFOLIO</a>
+                    <a href="#blog">BLOG</a>
+                    <a href="#contact">CONTACT</a>  
                 </ul>
                 <div class="mobile-nav">
                     <i class="mobile-nav-icon fa-solid fa-bars"></i>
@@ -37,33 +39,33 @@
             </nav>
         </section>
         <div class="about-wrapper">
-            <section class="about">
-                <h2>ABOUT</h2>
+            <section class="about padding-920px">
+                <h2 id="about">ABOUT</h2>
                 <div class="about__info">
                     <div class="info">
-                        <div class="icon-container">
-
+                        <div class="icon-container center-content">
+                            <iconify-icon icon="mdi:speedometer"></iconify-icon>
                         </div>
                         <h3>Fast</h3>
                         <p>Fast load times and lag free interaction, my highest priority.</p>
                     </div>
                     <div class="info">
-                        <div class="icon-container">
-
+                        <div class="icon-container center-content">
+                            <iconify-icon icon="mdi:cellphone-link"></iconify-icon>
                         </div>
                         <h3>Responsive</h3>
                         <p>My layouts will work on any device, big or small.</p>
                     </div>
                     <div class="info">
-                        <div class="icon-container">
-
+                        <div class="icon-container center-content">
+                            <iconify-icon icon="akar-icons:light-bulb"></iconify-icon>
                         </div>
                         <h3>Intuitive</h3>
                         <p>Strong preference for easy to use, intuitive UX/UI.</p>
                     </div>
                     <div class="info">
-                        <div class="icon-container">
-
+                        <div class="icon-container center-content">
+                            <iconify-icon icon="ion:rocket"></iconify-icon>
                         </div>
                         <h3>Dynamic</h3>
                         <p>Websites don't have to be static, I love making pages come to life. </p>
@@ -90,8 +92,8 @@
             </section>
         </div>
         <div class="project-wrapper">
-            <section class="projects">
-                <h2>PROJECTS</h2>
+            <section class="projects padding-920px">
+                <h2 id="portfolio">PROJECTS</h2>
                 <ul class="nav-buttons">
                     <li><button class="active">ALL</button></li>
                     <li><button>FLASK</button></li>
@@ -210,8 +212,8 @@
                 </div>
             </section>
         </div>
-        <div class="blog-wrapper">
-            <section class="blog-section">
+        <div id="blog" class="blog-wrapper">
+            <section class="blog-section padding-920px">
                 <h2>BLOG</h2>
                 <div class="blogs">
                     <div class="blog">
@@ -241,8 +243,8 @@
                 </div>
             </section>
         </div>
-        <div class="contact-wrapper">
-            <section class="contact-section">
+        <div id="contact" class="contact-wrapper">
+            <section class="contact-section padding-920px">
                 <h2>CONTACT</h2>
                 <p> Have a question or want to work together?
                 </p>
@@ -258,7 +260,7 @@
                 </form>
             </section>
         </div>
-        <footer>
+        <footer class="padding-920px">
             <a href="#top" class="to-top"><i class="fas fa-angle-double-up"></i></a>
             <div class="social-icons">
                 <a href="" class="icon"><i class="fab fa-github"></i></a>

@@ -18,21 +18,7 @@ mobileNav.addEventListener('click', () => {
     }
 })
 
-/*for (let project of projects) {
-    project.addEventListener('mouseenter', () => {
-        let projectInfo = Array.from(document.querySelectorAll('.project-info'));
-        projectInfo.style.display = 'grid';
-    })
-}
-
-for (let project of projects) {
-    project.addEventListener('mouseleave', () => {
-        let projectInfo = document.querySelector('.project-info');
-        projectInfo.style.display = 'none';
-    })
-}*/
-
-window.addEventListener('scroll', () => {
+function setNavPosition() {
     if (window.scrollY > window.innerHeight) {
         navBar.classList.add('sticky');
     }
@@ -40,5 +26,22 @@ window.addEventListener('scroll', () => {
     if (window.scrollY < window.innerHeight) {
         navBar.classList.remove('sticky');
     }
-})
+}
+
+window.addEventListener('scroll', setNavPosition);
+window.addEventListener('load', setNavPosition);
+
+let sectionHeadings = document.querySelectorAll("h2");
+
+
+function slideIn() {
+    for (let sectionHeading of sectionHeadings) {
+        if (sectionHeading.getBoundingClientRect().top < window.innerHeight) {
+            sectionHeading.classList.add("animate__animated");
+            sectionHeading.classList.add("animate__backInLeft");
+        }
+    }
+}
+
+window.addEventListener('scroll', slideIn)
 
