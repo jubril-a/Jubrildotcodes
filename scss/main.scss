@@ -1,0 +1,45 @@
+@use "resets";
+@use "utils";
+@use "hero";
+@use "about";
+@use "projects";
+@use "blog";
+@use "message";
+@use "footer";
+
+h1 {
+    font-weight: 200;
+    font-size: clamp(1.5rem, calc(-0.05rem + 3.5vw), 2.5rem);
+    line-height: 1.15;
+
+    .nxt-line {
+        font-weight: 400;
+    }
+}
+
+h2 {
+    font-size: clamp(2rem, calc(2rem + 2vw), 3rem);
+    font-weight: 700;
+    display: grid;
+    width: min-content;
+    margin: 3rem auto;
+    justify-items: center;
+
+    &::after {
+        content: "";
+        width: 50%;
+        height: 5px;
+        background-color: #000;
+    }
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 920px) {
+    .padding-920px {
+        padding-block: 5rem;
+    }
+}

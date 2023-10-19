@@ -1,0 +1,30 @@
+footer {
+    padding: 5rem 2rem 2rem;
+    background-color: yellow;
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    position: relative;
+
+    .to-top {
+        padding: 1rem;
+        background-color: #000;
+        color: aqua;
+        font-size: 1.5rem;
+        position: absolute;
+        top: -25px;
+        border: 1px solid rgba(255, 255, 255, .1);
+    }
+}
+
+.social-icons {
+    display: flex;
+    gap: 2rem;
+
+    .icon {
+        padding: 1rem;
+        background-color: #000;
+        color: aqua;
+        font-size: 1.5rem;
+    }
+}
