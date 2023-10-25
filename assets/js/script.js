@@ -32,6 +32,7 @@ window.addEventListener('scroll', setNavPosition);
 window.addEventListener('load', setNavPosition);
 
 let sectionHeadings = document.querySelectorAll("h2");
+let infos = document.querySelectorAll("info-zoom");
 
 
 function slideIn() {
@@ -43,5 +44,15 @@ function slideIn() {
     }
 }
 
-window.addEventListener('scroll', slideIn)
+function zoomIn() {
+    for (let info of infos) {
+        if (info.getBoundingClientRect().top < window.innerHeight) {
+            info.classList.add("animate__animated");
+            info.classList.add("animate__zoomIn");
+        }
+    }
+}
+
+window.addEventListener('scroll', slideIn);
+window.addEventListener('scroll', zoomIn);
 

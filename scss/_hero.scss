@@ -30,6 +30,11 @@ main {
         letter-spacing: -1px;
         color: #000;
         border-radius: .5rem;
+        transition: all .5s ease;
+
+        .fa-arrow-right {
+            transition: transform .5s ease;
+        }
 
         &:hover {
             background-color: #000;
@@ -92,6 +97,7 @@ nav {
         color: #fff;
         font-weight: 200;
         font-size: 1rem;
+        transition: color 1s ease;
 
         &:hover {
             color: yellow;
