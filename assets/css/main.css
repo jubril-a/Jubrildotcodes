@@ -150,6 +150,15 @@ nav {
   }
 }
 
+.change-bg {
+  background-color: transparent;
+  border: 0;
+}
+.change-bg i {
+  color: yellow;
+  font-size: 1.5rem;
+}
+
 .expanded {
   display: block;
   position: fixed;
@@ -268,7 +277,7 @@ h2 {
 }
 
 .project-wrapper {
-  background-color: aliceblue;
+  background-color: hsl(210deg, 40%, 90%);
 }
 
 .projects {
@@ -302,15 +311,23 @@ h2 {
   height: 320px;
   flex: 1 0 min(320px, 100%);
 }
-.projects-container .project:nth-child(odd) {
+
+.project {
+  background-size: cover;
+  background-position: center;
+}
+.project:hover {
   background-color: yellow;
 }
-.projects-container .project:nth-child(even) {
-  background-color: rgb(149, 149, 22);
-}
-
 .project:hover .project-info {
   display: grid;
+}
+
+.project-description h3 {
+  font-size: 1.2rem;
+}
+.project-description .tech-stack {
+  font-size: 1rem;
 }
 
 .project-info {
@@ -318,16 +335,71 @@ h2 {
   display: grid;
   gap: 5rem;
   display: none;
-}
-.project-info .project-links {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
+  justify-items: center;
 }
 .project-info .project-link {
   background-color: #fff;
   padding: 0.8rem 1rem;
   display: block;
+  border: 0;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.project-more {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: none;
+  grid-template-rows: 1.5fr 1fr;
+  justify-content: center;
+}
+.project-more > * {
+  width: 50vw;
+}
+.project-more .project-images {
+  background-size: cover;
+  background-position: center;
+  border-bottom: 2px solid black;
+  display: grid;
+  justify-content: end;
+  padding: 2rem;
+}
+.project-more .project-images .close {
+  color: #fff;
+  font-size: 2rem;
+  max-height: -webkit-min-content;
+  max-height: -moz-min-content;
+  max-height: min-content;
+}
+.project-more .project-xtra {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.project-more .project-xtra h1 {
+  font-weight: 700;
+}
+.project-more .project-xtra .tech-stack {
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  padding-bottom: 0.5rem;
+}
+.project-more .project-xtra .live-url {
+  background-color: black;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1rem;
+}
+.project-more .project-xtra .live-url:hover {
+  background-color: yellow;
+  color: #000;
 }
 
 .blogs {

@@ -44,15 +44,190 @@ function slideIn() {
     }
 }
 
-function zoomIn() {
+/*function zoomIn() {
     for (let info of infos) {
         if (info.getBoundingClientRect().top < window.innerHeight) {
             info.classList.add("animate__animated");
             info.classList.add("animate__zoomIn");
         }
     }
-}
+}*/
 
 window.addEventListener('scroll', slideIn);
-window.addEventListener('scroll', zoomIn);
+//window.addEventListener('scroll', zoomIn);
+
+let hero = document.querySelector(".hero");
+let bgToggle = document.querySelector(".change-bg i");
+
+bgToggle.addEventListener('click', () => {
+    if (bgToggle.style.color == "yellow") {
+        bgToggle.style.color = "#67CFE9"
+        hero.style.backgroundColor = "#67CFE9";
+    } else {
+        bgToggle.style.color = "yellow"
+        hero.style.backgroundColor = "yellow";
+    }
+})
+
+let projectsContainer = document.querySelector(".projects-container");
+
+const projectInfo = {
+    "Project 1": {
+        id: 1,
+        "project-name": "ChowNow Ordering",
+        "main-image": "project-1.jpg",
+        "display-images": ["display-project-1-1.jpg", "display-project-1-2.jpg", "display-project-1-3.jpg"],
+        "tech-stack": ["ReactJs", "Python"],
+        "short-description": "ChowNow is a commission-free online ordering system and food ordering app helping restaurants feed their hungry customers.",
+        "live-site-url": "https://direct.chownow.com/direct/195/locations/260"
+    },
+    "Project 2": {
+        id: 2,
+        "project-name": "ChowNow Discover",
+        "main-image": "project-2.jpg",
+        "display-images": ["display-project-2-1.jpg", "display-project-2-2.jpg", "display-project-2-3.jpg"],
+        "tech-stack": ["ReactJs", "Python"],
+        "short-description": "ChowNow Discover is a platform that lets customers discover new local restaurants and provides business owners with tools to convert first time orders into lifelong diners.",
+        "live-site-url": "https://eat.chownow.com/"
+    },
+    "Project 3": {
+        id: 3,
+        "project-name": "NewRelic.com",
+        "main-image": "project-3.jpg",
+        "display-images": ["display-project-3-1.jpg", "display-project-3-2.jpg", "display-project-3-3.jpg"],
+        "tech-stack": ["ReactJs", "Flask", "AEM"],
+        "short-description": "Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.",
+        "live-site-url": "http://www.newrelic.com/"
+    },
+    "Project 4": {
+        id: 4,
+        "project-name": "Project 4 Name",
+        "main-image": "project-4.jpg",
+        "display-images": [],
+        "tech-stack": "",
+        "short-description": "",
+        "live-site-url": ""
+    },
+    "Project 5": {
+        id: 5,
+        "project-name": "Project 5 Name",
+        "main-image": "project-5.jpg",
+        "display-images": [],
+        "tech-stack": "",
+        "short-description": "",
+        "live-site-url": ""
+    },
+    "Project 6": {
+        id: 6,
+        "project-name": "Project 6 Name",
+        "main-image": "project-6.jpg",
+        "display-images": [],
+        "tech-stack": "",
+        "short-description": "",
+        "live-site-url": ""
+    },
+    "Project 7": {
+        id: 7,
+        "project-name": "Project 7 Name",
+        "main-image": "project-7.jpg",
+        "display-images": [],
+        "tech-stack": "",
+        "short-description": "",
+        "live-site-url": ""
+    },
+    "Project 8": {
+        id: 8,
+        "project-name": "Project 8 Name",
+        "main-image": "project-8.jpg",
+        "display-images": [],
+        "tech-stack": "",
+        "short-description": "",
+        "live-site-url": ""
+    },
+    "Project 9": {
+        id: 9,
+        "project-name": "Project 9 Name",
+        "main-image": "project-9.jpg",
+        "display-images": [],
+        "tech-stack": "",
+        "short-description": "",
+        "live-site-url": ""
+    }
+}
+
+for (let project in projectInfo) {
+    let projectElm = document.createElement("div");
+    projectElm.classList.add("project");
+    projectElm.classList.add("center-content");
+    
+    projectElm.style.backgroundImage = `url("/assets/images/projects/${projectInfo[project]["main-image"]}")`;
+    projectElm.addEventListener('mouseover', () => projectElm.style.backgroundImage = "none")
+    projectElm.addEventListener('mouseout', () => projectElm.style.backgroundImage =
+        `url("/assets/images/projects/${projectInfo[project]["main-image"]}")`)
+    
+    projectElm.innerHTML = `
+    <div class="project-info">
+            <div class="project-description">
+                <h3>${projectInfo[project]["project-name"]}</h3>
+                <p class="tech-stack">${projectInfo[project]["tech-stack"]}</p>
+            </div>
+            <button id="${projectInfo[project]["id"]}" class="project-link">LEARN MORE</button>
+        </div>
+    `
+    projectsContainer.appendChild(projectElm);
+}
+
+let openProjects = document.querySelectorAll(".project-link");
+let closeProjects = document.querySelectorAll(".close");
+let moreInfo = document.querySelector(".project-more");
+let projectImages = document.querySelector(".project-images");
+let projectXtra = document.querySelector(".project-xtra");
+let activate = document.querySelectorAll(".nav-buttons button");
+
+for (let active of activate) {
+    active.addEventListener('click', () => {
+        currentActive = document.querySelector(".nav-buttons .active");
+        currentActive.classList.remove("active");
+        active.classList.add("active");
+    })
+}
+
+for (let openProject of openProjects) {
+    openProject.addEventListener("click", () => {
+        let projectId = openProject.id;
+        let project;
+
+        for (obj in projectInfo) {
+            if (projectInfo[obj].id == projectId) {
+                project = obj;
+                break
+            }
+        }
+
+        xtraContent = `<div class="project-xtra">
+            <h1 class="heading1">${projectInfo[project]["project-name"]}</h1>
+            <p class="tech-stack">${projectInfo[project]["tech-stack"]}</p>
+            <p class="description">${projectInfo[project]["short-description"]}</p>
+            <a href="${projectInfo[project]["live-site-url"]}" class="live-url">VIEW SITE</a>
+        </div>
+        `
+        projectXtra.innerHTML = xtraContent;
+        let images = projectInfo[project]["display-images"];
+        let nextImage = function() {
+
+        }
+
+        projectImages.style.backgroundImage = `url("/assets/images/projects/${projectInfo[project]["display-images"][0]}")`;
+
+        moreInfo.style.display = "grid";
+    })
+}
+
+for (let closeProject of closeProjects) {
+    closeProject.addEventListener('click', () => {
+        moreInfo.style.display = "none";
+    })    
+}
+
+
 

@@ -109,6 +109,16 @@ nav {
     }
 }
 
+.change-bg {
+    background-color: transparent;
+    border: 0;
+
+    i {
+        color: yellow;
+        font-size: 1.5rem;
+    }
+}
+
 .expanded {
     display: block;
     position: fixed;
