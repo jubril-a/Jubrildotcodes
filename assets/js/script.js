@@ -206,7 +206,7 @@ for (let openProject of openProjects) {
 
         xtraContent = `<div class="project-xtra">
             <h1 class="heading1">${projectInfo[project]["project-name"]}</h1>
-            <p class="tech-stack">${projectInfo[project]["tech-stack"]}</p>
+            <p class="tech-stack">TECH STACK: ${projectInfo[project]["tech-stack"]}</p>
             <p class="description">${projectInfo[project]["short-description"]}</p>
             <a href="${projectInfo[project]["live-site-url"]}" class="live-url">VIEW SITE</a>
         </div>
@@ -229,5 +229,60 @@ for (let closeProject of closeProjects) {
     })    
 }
 
+const blogs = {
+    "Blog 1": {
+        "blog-name": "Breaking Your Coder's Block",
+        "date": "APRIL 29, 2016",
+        "short": "At one time or another, as a developer, we've all found ourselves hopelessly stuck on a coding issue",
+        "image": "blog-1.jpg",
+        "url": "#blog-1-url"
+    },
+    "Blog 2": {
+        "blog-name": "!Awake: This is Your Brain on Caffeine",
+        "date": "MARCH 19, 2015",
+        "short": "If there's one thing I can truly claim to be an expert on, it's staying awake. For five years I struggled to stay employed",
+        "image": "blog-2.jpg",
+        "url": "#blog-2-url"
+    },
+    "Blog 3": {
+        "blog-name": "Getting a handle on Handlebars",
+        "date": "MARCH 4, 2015",
+        "short": "Here at EyeCue Lab we render most of our data-laden HTML pages in Handlebar templates",
+        "image": "blog-3.jpg",
+        "url": "#blog-3-url"
+
+    },
+    "Blog 4": {
+        "blog-name": "5 Extensions for Your Chrome Toolbelt",
+        "date": "FEBRUARY 23, 2015",
+        "short": " If you're not using Google Chrome as a front-end web developer, you're missing out. Not only is Chrome the",
+        "image": "blog-4.jpg",
+        "url": "#blog-4-url"
+    }
+}
+
+let blogsContainer = document.querySelector(".blogs");
+
+for (let blog in blogs) {
+    blogContent =  `
+    <div id="${blog}" class="blog__image"></div>
+    <h3>${blogs[blog]["blog-name"]}</h3>
+    <p class="date mb-100">${blogs[blog]["date"]}</p>
+    <p>${blogs[blog]["short"]} ...</p>
+    <a class="blog__link" href="${blogs[blog]["url"]}"></a>
+    `;
+
+    let blogELm = document.createElement('div');
+    blogELm.classList.add('blog');
+    blogELm.innerHTML = blogContent;
+    blogsContainer.appendChild(blogELm);
+}
+
+let blogImages = document.querySelectorAll(".blog__image");
+
+for (let blogImage of blogImages) {
+    let blog = blogImage.id;
+    blogImage.style.backgroundImage = `url('/assets/images/blogs/${blogs[blog]["image"]}')`;
+}
 
 

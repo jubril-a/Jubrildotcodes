@@ -93,18 +93,17 @@
     }
 
     .project-images {
+        background-color: yellow;
         background-size: cover;
         background-position: center;
         border-bottom: 2px solid black;
-        display: grid;
-        justify-content: end;
         padding: 2rem;
 
         .close {
             color: #fff;
             font-size: 2rem;
-            //background-color: #000;
-            //padding: 1rem;
+            background-color: #000;
+            padding: .5rem;
             max-height: min-content;
         }
     }
