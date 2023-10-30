@@ -101,81 +101,96 @@ const projectInfo = {
     },
     "Project 4": {
         id: 4,
-        "project-name": "Project 4 Name",
+        "project-name": "Roambi",
         "main-image": "project-4.jpg",
-        "display-images": [],
-        "tech-stack": "",
-        "short-description": "",
-        "live-site-url": ""
+        "display-images": ["display-project-4-1.jpg", "display-project-4-2.jpg", "display-project-4-3.jpg"],
+        "tech-stack": ["Javascript"],
+        "short-description": "Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.",
+        "live-site-url": "http://www.roambi.com/"
     },
     "Project 5": {
         id: 5,
-        "project-name": "Project 5 Name",
+        "project-name": "WalkerTracker",
         "main-image": "project-5.jpg",
-        "display-images": [],
-        "tech-stack": "",
-        "short-description": "",
+        "display-images": ["display-project-5-1.jpg", "display-project-5-2.jpg", "display-project-5-3.jpg"],
+        "tech-stack": ["Javascript", "Ruby on Rails"],
+        "short-description": "Walker Tracker offers goal management, fitness tracking, and team competitions to companies for internal use. A Ruby on Rails and Javascript companion site for the Walker Tracker App. Features visual metrics and gamified progression system.",
         "live-site-url": ""
     },
     "Project 6": {
         id: 6,
-        "project-name": "Project 6 Name",
+        "project-name": "MyStand",
         "main-image": "project-6.jpg",
-        "display-images": [],
-        "tech-stack": "",
-        "short-description": "",
+        "display-images": ["display-project-6-1.jpg", "display-project-6-2.jpg", "display-project-6-3.jpg"],
+        "tech-stack": ["Javascript", "Node.js"],
+        "short-description": "MyStand is a crowd-funding, media sharing website, that has you donating actions instead of money out of your pocket. Single page App built with Node.js on Sails and Angular 2.0. Features social media sharing and large scale crowd-funding.",
         "live-site-url": ""
     },
     "Project 7": {
         id: 7,
-        "project-name": "Project 7 Name",
+        "project-name": "NeverSurrender",
         "main-image": "project-7.jpg",
-        "display-images": [],
-        "tech-stack": "",
-        "short-description": "",
+        "display-images": ["display-project-7-1.jpg", "display-project-7-2.jpg", "display-project-7-3.jpg"],
+        "tech-stack": ["Javascript"],
+        "short-description": "NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.",
         "live-site-url": ""
     },
     "Project 8": {
         id: 8,
-        "project-name": "Project 8 Name",
+        "project-name": "Powur",
         "main-image": "project-8.jpg",
-        "display-images": [],
-        "tech-stack": "",
-        "short-description": "",
-        "live-site-url": ""
+        "display-images": ["display-project-8-1.jpg", "display-project-8-2.jpg", "display-project-8-3.jpg"],
+        "tech-stack": ["Angular", "Ruby on Rails"],
+        "short-description": "Powur is a marketing platform for lead generation, recruitment, and team building. Built with Ruby on Rails and Angular-UI. Makes use of Angular-material for front-end visuals. Features complex user tree heiarchy and commission system.",
+        "live-site-url": "http://www.powur.com/with/42"
     },
     "Project 9": {
         id: 9,
-        "project-name": "Project 9 Name",
+        "project-name": "The Mall",
         "main-image": "project-9.jpg",
-        "display-images": [],
-        "tech-stack": "",
-        "short-description": "",
+        "display-images": ["display-project-9-1.jpg", "display-project-9-2.jpg", "display-project-9-3.jpg"],
+        "tech-stack": ["React.js", "Node"],
+        "short-description": "The Mall is a place to follow the latest fashion purchases of your friends and favorite celebrities. Built with Node.js and Handlebars. Features the ability to import thousands of top brands products into one shopping site.",
         "live-site-url": ""
     }
 }
 
-for (let project in projectInfo) {
-    let projectElm = document.createElement("div");
-    projectElm.classList.add("project");
-    projectElm.classList.add("center-content");
-    
-    projectElm.style.backgroundImage = `url("/assets/images/projects/${projectInfo[project]["main-image"]}")`;
-    projectElm.addEventListener('mouseover', () => projectElm.style.backgroundImage = "none")
-    projectElm.addEventListener('mouseout', () => projectElm.style.backgroundImage =
-        `url("/assets/images/projects/${projectInfo[project]["main-image"]}")`)
-    
-    projectElm.innerHTML = `
-    <div class="project-info">
-            <div class="project-description">
-                <h3>${projectInfo[project]["project-name"]}</h3>
-                <p class="tech-stack">${projectInfo[project]["tech-stack"]}</p>
+function populateProjects(technology) {
+    let projectDetails;
+
+    if (technology == "all") {
+        projectDetails = projectInfo;
+    } else {
+        // return details of projects whose tech stack contain technology arg
+    }
+
+    console.log(projectDetails);
+
+    for (let project in projectDetails) {
+        let projectElm = document.createElement("div");
+        projectElm.classList.add("project");
+        projectElm.classList.add("center-content");
+        
+        projectElm.style.backgroundImage = `url("/assets/images/projects/${projectDetails[project]["main-image"]}")`;
+        projectElm.addEventListener('mouseover', () => projectElm.style.backgroundImage = "none")
+        projectElm.addEventListener('mouseout', () => projectElm.style.backgroundImage =
+            `url("/assets/images/projects/${projectDetails[project]["main-image"]}")`)
+        
+        projectElm.innerHTML = `
+        <div class="project-info">
+                <div class="project-description">
+                    <h3>${projectDetails[project]["project-name"]}</h3>
+                    <p class="tech-stack">${projectDetails[project]["tech-stack"]}</p>
+                </div>
+                <button id="${projectDetails[project]["id"]}" class="project-link">LEARN MORE</button>
             </div>
-            <button id="${projectInfo[project]["id"]}" class="project-link">LEARN MORE</button>
-        </div>
-    `
-    projectsContainer.appendChild(projectElm);
+        `
+        projectsContainer.appendChild(projectElm);
+    }
 }
+
+//populateProjects("Angular");
+populateProjects("all");
 
 let openProjects = document.querySelectorAll(".project-link");
 let closeProjects = document.querySelectorAll(".close");
@@ -183,6 +198,8 @@ let moreInfo = document.querySelector(".project-more");
 let projectImages = document.querySelector(".project-images");
 let projectXtra = document.querySelector(".project-xtra");
 let activate = document.querySelectorAll(".nav-buttons button");
+let nextProjectImage = document.querySelector(".next");
+let prevProjectImage = document.querySelector(".prev");
 
 for (let active of activate) {
     active.addEventListener('click', () => {
@@ -213,11 +230,31 @@ for (let openProject of openProjects) {
         `
         projectXtra.innerHTML = xtraContent;
         let images = projectInfo[project]["display-images"];
-        let nextImage = function() {
-
-        }
-
+       
         projectImages.style.backgroundImage = `url("/assets/images/projects/${projectInfo[project]["display-images"][0]}")`;
+
+        let currentImage = 0;
+
+        nextProjectImage.addEventListener('click', () => {
+            if (currentImage == 2) {
+                currentImage = 0;
+            } else {
+                currentImage += 1; 
+            }
+            
+            projectImages.style.backgroundImage = `url("/assets/images/projects/${projectInfo[project]["display-images"][currentImage]}")`;
+        })
+
+        prevProjectImage.addEventListener('click', () => {
+            if (currentImage == 0) {
+                currentImage = 2;
+            } else {
+                currentImage -= 1; 
+            }
+
+            projectImages.style.backgroundImage = `url("/assets/images/projects/${projectInfo[project]["display-images"][currentImage]}")`;
+        })
+        
 
         moreInfo.style.display = "grid";
     })
