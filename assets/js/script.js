@@ -31,14 +31,14 @@ function setNavPosition() {
 window.addEventListener('scroll', setNavPosition);
 window.addEventListener('load', setNavPosition);
 
-mainSections.forEach((section) => {
+/*mainSections.forEach((section) => {
     window.addEventListener('scroll', () => {
         if ((section.getBoundingClientRect().top >= 1) &&
         (section.getBoundingClientRect().bottom > 1)) {
             alert(section.id);
         }
     })
-})
+})*/
 
 let sectionHeadings = document.querySelectorAll("h2");
 let infos = document.querySelectorAll("info-zoom");
