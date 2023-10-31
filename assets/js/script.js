@@ -174,7 +174,7 @@ function populateProjects(technology) {
         projectElm.style.backgroundImage = projectDetails[project]["main-image"];
         projectElm.addEventListener('mouseover', () => projectElm.style.backgroundImage = "none")
         projectElm.addEventListener('mouseout', () => projectElm.style.backgroundImage =
-            `url(projectDetails[project]["main-image"])`)
+            projectDetails[project]["main-image"])
         
         projectElm.innerHTML = `
         <div class="project-info">
