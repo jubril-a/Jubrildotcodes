@@ -2,7 +2,7 @@ let navBar = document.querySelector(".nav-bar");
 let mobileNav = document.querySelector('.mobile-nav');
 let mobileNavIcon = document.querySelector('.mobile-nav-icon');
 let primaryNav = document.querySelector('.primary-navigation');
-let projects = document.querySelectorAll('.project');
+let mainSections = document.querySelectorAll(".mains");
 
 mobileNav.addEventListener('click', () => {
     if (primaryNav.classList.contains('expanded')) {
@@ -30,6 +30,15 @@ function setNavPosition() {
 
 window.addEventListener('scroll', setNavPosition);
 window.addEventListener('load', setNavPosition);
+
+mainSections.forEach((section) => {
+    window.addEventListener('scroll', () => {
+        if ((section.getBoundingClientRect().top >= 1) &&
+        (section.getBoundingClientRect().bottom > 1)) {
+            alert(section.id);
+        }
+    })
+})
 
 let sectionHeadings = document.querySelectorAll("h2");
 let infos = document.querySelectorAll("info-zoom");
@@ -61,6 +70,7 @@ bgToggle.addEventListener('click', () => {
     }
 })
 
+let projects = document.querySelectorAll('.project');
 let projectsContainer = document.querySelector(".projects-container");
 
 const projectInfo = {
@@ -258,6 +268,9 @@ for (let closeProject of closeProjects) {
     })    
 }
 
+let blogsContainer = document.querySelector(".blogs");
+let blogImages = document.querySelectorAll(".blog__image");
+
 const blogs = {
     "Blog 1": {
         "blog-name": "Breaking Your Coder's Block",
@@ -290,8 +303,6 @@ const blogs = {
     }
 }
 
-let blogsContainer = document.querySelector(".blogs");
-
 for (let blog in blogs) {
     blogContent =  `
     <div id="${blog}" class="blog__image"></div>
@@ -306,8 +317,6 @@ for (let blog in blogs) {
     blogELm.innerHTML = blogContent;
     blogsContainer.appendChild(blogELm);
 }
-
-let blogImages = document.querySelectorAll(".blog__image");
 
 for (let blogImage of blogImages) {
     let blog = blogImage.id;
