@@ -171,10 +171,10 @@ function populateProjects(technology) {
         projectElm.classList.add("project");
         projectElm.classList.add("center-content");
         
-        projectElm.style.backgroundImage = `url("/assets/images/projects/${projectDetails[project]["main-image"]}")`;
+        projectElm.style.backgroundImage = `url("assets/images/projects/${projectDetails[project]["main-image"]}")`;
         projectElm.addEventListener('mouseover', () => projectElm.style.backgroundImage = "none")
         projectElm.addEventListener('mouseout', () => projectElm.style.backgroundImage =
-            `url("/assets/images/projects/${projectDetails[project]["main-image"]}")`)
+            `url("assets/images/projects/${projectDetails[project]["main-image"]}")`)
         
         projectElm.innerHTML = `
         <div class="project-info">
