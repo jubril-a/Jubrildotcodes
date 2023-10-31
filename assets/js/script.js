@@ -53,28 +53,20 @@ function slideIn() {
     }
 }
 
-/*function zoomIn() {
-    for (let info of infos) {
-        if (info.getBoundingClientRect().top < window.innerHeight) {
-            info.classList.add("animate__animated");
-            info.classList.add("animate__zoomIn");
-        }
-    }
-}*/
-
 window.addEventListener('scroll', slideIn);
-//window.addEventListener('scroll', zoomIn);
 
 let hero = document.querySelector(".hero");
 let bgToggle = document.querySelector(".change-bg i");
+let root = document.querySelector(':root');
 
 bgToggle.addEventListener('click', () => {
-    if (bgToggle.style.color == "yellow") {
-        bgToggle.style.color = "#67CFE9"
-        hero.style.backgroundColor = "#67CFE9";
+
+    if (bgToggle.classList.contains("toggle")) {
+        root.style.setProperty("--main-bg-color", "yellow");
+        bgToggle.classList.remove("toggle");
     } else {
-        bgToggle.style.color = "yellow"
-        hero.style.backgroundColor = "yellow";
+        root.style.setProperty("--main-bg-color", "orange");
+        bgToggle.classList.add("toggle");
     }
 })
 
