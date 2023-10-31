@@ -75,7 +75,7 @@ const projectInfo = {
     "Project 1": {
         id: 1,
         "project-name": "ChowNow Ordering",
-        "main-image": "assets/images/projects/project-1.jpg",
+        "main-image": "project-1.jpg",
         "display-images": ["display-project-1-1.jpg", "display-project-1-2.jpg", "display-project-1-3.jpg"],
         "tech-stack": ["ReactJs", "Python"],
         "short-description": "ChowNow is a commission-free online ordering system and food ordering app helping restaurants feed their hungry customers.",
@@ -84,7 +84,7 @@ const projectInfo = {
     "Project 2": {
         id: 2,
         "project-name": "ChowNow Discover",
-        "main-image": "assets/images/projects/project-2.jpg",
+        "main-image": "project-2.jpg",
         "display-images": ["display-project-2-1.jpg", "display-project-2-2.jpg", "display-project-2-3.jpg"],
         "tech-stack": ["ReactJs", "Python"],
         "short-description": "ChowNow Discover is a platform that lets customers discover new local restaurants and provides business owners with tools to convert first time orders into lifelong diners.",
@@ -93,7 +93,7 @@ const projectInfo = {
     "Project 3": {
         id: 3,
         "project-name": "NewRelic.com",
-        "main-image": "assets/images/projects/project-3.jpg",
+        "main-image": "project-3.jpg",
         "display-images": ["display-project-3-1.jpg", "display-project-3-2.jpg", "display-project-3-3.jpg"],
         "tech-stack": ["ReactJs", "Flask", "AEM"],
         "short-description": "Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.",
@@ -102,7 +102,7 @@ const projectInfo = {
     "Project 4": {
         id: 4,
         "project-name": "Roambi",
-        "main-image": "assets/images/projects/project-4.jpg",
+        "main-image": "project-4.jpg",
         "display-images": ["display-project-4-1.jpg", "display-project-4-2.jpg", "display-project-4-3.jpg"],
         "tech-stack": ["Javascript"],
         "short-description": "Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.",
@@ -111,7 +111,7 @@ const projectInfo = {
     "Project 5": {
         id: 5,
         "project-name": "WalkerTracker",
-        "main-image": "assets/images/projects/project-5.jpg",
+        "main-image": "project-5.jpg",
         "display-images": ["display-project-5-1.jpg", "display-project-5-2.jpg", "display-project-5-3.jpg"],
         "tech-stack": ["Javascript", "Ruby on Rails"],
         "short-description": "Walker Tracker offers goal management, fitness tracking, and team competitions to companies for internal use. A Ruby on Rails and Javascript companion site for the Walker Tracker App. Features visual metrics and gamified progression system.",
@@ -120,7 +120,7 @@ const projectInfo = {
     "Project 6": {
         id: 6,
         "project-name": "MyStand",
-        "main-image": "assets/images/projects/project-6.jpg",
+        "main-image": "project-6.jpg",
         "display-images": ["display-project-6-1.jpg", "display-project-6-2.jpg", "display-project-6-3.jpg"],
         "tech-stack": ["Javascript", "Node.js"],
         "short-description": "MyStand is a crowd-funding, media sharing website, that has you donating actions instead of money out of your pocket. Single page App built with Node.js on Sails and Angular 2.0. Features social media sharing and large scale crowd-funding.",
@@ -129,7 +129,7 @@ const projectInfo = {
     "Project 7": {
         id: 7,
         "project-name": "NeverSurrender",
-        "main-image": "assets/images/projects/project-7.jpg",
+        "main-image": "project-7.jpg",
         "display-images": ["display-project-7-1.jpg", "display-project-7-2.jpg", "display-project-7-3.jpg"],
         "tech-stack": ["Javascript"],
         "short-description": "NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.",
@@ -138,7 +138,7 @@ const projectInfo = {
     "Project 8": {
         id: 8,
         "project-name": "Powur",
-        "main-image": "assets/images/projects/project-8.jpg",
+        "main-image": "project-8.jpg",
         "display-images": ["display-project-8-1.jpg", "display-project-8-2.jpg", "display-project-8-3.jpg"],
         "tech-stack": ["Angular", "Ruby on Rails"],
         "short-description": "Powur is a marketing platform for lead generation, recruitment, and team building. Built with Ruby on Rails and Angular-UI. Makes use of Angular-material for front-end visuals. Features complex user tree heiarchy and commission system.",
@@ -147,7 +147,7 @@ const projectInfo = {
     "Project 9": {
         id: 9,
         "project-name": "The Mall",
-        "main-image": "assets/images/projects/project-9.jpg",
+        "main-image": "project-9.jpg",
         "display-images": ["display-project-9-1.jpg", "display-project-9-2.jpg", "display-project-9-3.jpg"],
         "tech-stack": ["React.js", "Node"],
         "short-description": "The Mall is a place to follow the latest fashion purchases of your friends and favorite celebrities. Built with Node.js and Handlebars. Features the ability to import thousands of top brands products into one shopping site.",
