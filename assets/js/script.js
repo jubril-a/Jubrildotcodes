@@ -231,7 +231,7 @@ for (let openProject of openProjects) {
         projectXtra.innerHTML = xtraContent;
         let images = projectInfo[project]["display-images"];
        
-        projectImages.style.backgroundImage = `url("/assets/images/projects/${projectInfo[project]["display-images"][0]}")`;
+        projectImages.style.backgroundImage = `url("assets/images/projects/${projectInfo[project]["display-images"][0]}")`;
 
         let currentImage = 0;
 
@@ -242,7 +242,7 @@ for (let openProject of openProjects) {
                 currentImage += 1; 
             }
             
-            projectImages.style.backgroundImage = `url("/assets/images/projects/${projectInfo[project]["display-images"][currentImage]}")`;
+            projectImages.style.backgroundImage = `url("assets/images/projects/${projectInfo[project]["display-images"][currentImage]}")`;
         })
 
         prevProjectImage.addEventListener('click', () => {
@@ -252,7 +252,7 @@ for (let openProject of openProjects) {
                 currentImage -= 1; 
             }
 
-            projectImages.style.backgroundImage = `url("/assets/images/projects/${projectInfo[project]["display-images"][currentImage]}")`;
+            projectImages.style.backgroundImage = `url("assets/images/projects/${projectInfo[project]["display-images"][currentImage]}")`;
         })
         
 
@@ -319,7 +319,7 @@ let blogImages = document.querySelectorAll(".blog__image");
 
 for (let blogImage of blogImages) {
     let blog = blogImage.id;
-    blogImage.style.backgroundImage = `url('/assets/images/blogs/${blogs[blog]["image"]}')`;
+    blogImage.style.backgroundImage = `url('assets/images/blogs/${blogs[blog]["image"]}')`;
 }
 
 
