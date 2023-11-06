@@ -319,9 +319,8 @@ let blogImages = document.querySelectorAll(".blog__image");
 
 console.log(blogImages)
 for (let blogImage of blogImages) {
-    //console.log(blogImage)
     let blog = blogImage.id;
-    blogImage.style.backgroundImage = `url('/assets/images/blogs/${blogs[blog]["image"]}')`;
+    blogImage.style.backgroundImage = `url('assets/images/blogs/${blogs[blog]["image"]}')`;
 }
 
 
