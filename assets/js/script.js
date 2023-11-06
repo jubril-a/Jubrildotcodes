@@ -166,8 +166,6 @@ function populateProjects(technology) {
         // return details of projects whose tech stack contain technology arg
     }
 
-    console.log(projectDetails);
-
     for (let project in projectDetails) {
         let projectElm = document.createElement("div");
         projectElm.classList.add("project");
@@ -269,7 +267,6 @@ for (let closeProject of closeProjects) {
 }
 
 let blogsContainer = document.querySelector(".blogs");
-let blogImages = document.querySelectorAll(".blog__image");
 
 const blogs = {
     "Blog 1": {
@@ -318,9 +315,13 @@ for (let blog in blogs) {
     blogsContainer.appendChild(blogELm);
 }
 
+let blogImages = document.querySelectorAll(".blog__image");
+
+console.log(blogImages)
 for (let blogImage of blogImages) {
+    //console.log(blogImage)
     let blog = blogImage.id;
-    blogImage.style.backgroundImage = `url('assets/images/blogs/${blogs[blog]["image"]}')`;
+    blogImage.style.backgroundImage = `url('/assets/images/blogs/${blogs[blog]["image"]}')`;
 }
 
 
