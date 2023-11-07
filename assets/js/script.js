@@ -32,8 +32,8 @@ function setNavPosition() {
 window.addEventListener('scroll', setNavPosition);
 window.addEventListener('load', setNavPosition);
 
-mainSections.forEach((section) => {
-    window.addEventListener('scroll', () => {
+function highlightLink(section) {
+    mainSections.forEach((section) => {
         let sectionLink = document.querySelector(`[href="#${section.id}"]`); 
         let sectionPos = section.getBoundingClientRect();
         let current = document.querySelector('.active');
@@ -42,8 +42,11 @@ mainSections.forEach((section) => {
             current.classList.remove('active')
             sectionLink.classList.add('active')
         }
-    })    
-})
+    })  
+}
+
+window.addEventListener('scroll', highlightLink)
+window.addEventListener('load', highlightLink)
 
 let sectionHeadings = document.querySelectorAll("h2");
 let infos = document.querySelectorAll("info-zoom");
