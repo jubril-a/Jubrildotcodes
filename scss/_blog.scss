@@ -1,9 +1,16 @@
 .blogs {
-    padding: 2rem;
-    gap: 2rem;
+    padding-block: 2rem;
+    gap: 1.5rem;
     display: grid;
     margin: auto;
     justify-items: center;
+
+    &:hover {
+
+        .blog:not(.blog:hover) {
+            opacity: .5;
+        }
+    }
 
     @media (min-width: 720px) and (max-width: 1120px) {
         grid-template-columns: 1fr 1fr;
@@ -17,14 +24,31 @@
 
     .blog {
         max-width: 320px;
+        transition: opacity .5s ease;
+        position: relative;
+
+        &:hover {
+            h3 {
+                color: rgb(18, 153, 153);
+            }
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
     }
 
     .blog__image {
         width: 100%;
         height: 180px;
         background-color: yellow;
+        background-position: center;
         margin-bottom: 1rem;
-        background-image: url('/assets/images/blog-1.jpg');
         background-size: cover;
+    }
+
+    .blog__link {
+        position: absolute;
+        inset: 0;
     }
 }

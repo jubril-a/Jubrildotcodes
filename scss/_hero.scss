@@ -1,7 +1,7 @@
 .hero {
     width: 100vw;
     height: 100vh;
-    background-color: yellow;
+    background-color: var(--main-bg-color);
 
     display: flex;
     flex-direction: column;
@@ -76,7 +76,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100vw;
-    border-bottom: 4px solid yellow;
+    border-bottom: 4px solid ;
     z-index: 100;
 } 
 
@@ -100,12 +100,26 @@ nav {
         transition: color 1s ease;
 
         &:hover {
-            color: yellow;
+            color: var(--main-bg-color);
+        }
+
+        &.active {
+            color: var(--main-bg-color);
         }
     }
 
     @media (max-width: 57rem) {
         display: none;
+    }
+}
+
+.change-bg {
+    background-color: transparent;
+    border: 0;
+
+    i {
+        color: var(--main-bg-color);
+        font-size: 1.5rem;
     }
 }
 

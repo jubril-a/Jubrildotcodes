@@ -1,5 +1,5 @@
 .project-wrapper {
-    background-color: aliceblue;
+    background-color: hsl(210, 40%, 90%);
 }
 
 .projects {
@@ -19,10 +19,9 @@
     button {
         background-color: transparent;
         border: 0;
-        //padding: .7rem 2.2rem;
         
         &.active {
-            background-color: yellow;
+            background-color: var(--main-bg-color);
             padding: .7rem 2.2rem;
         }
     }
@@ -32,26 +31,33 @@
     display: flex;
     flex-wrap:  wrap;
 
-
     .project {
         height: 320px;
         flex: 1 0 min(320px, 100%);
+    }
 
-        &:nth-child(odd) {
-            background-color: yellow;
-        }
+}
 
-        &:nth-child(even) {
-            background-color: rgb(149, 149, 22);
+.project {
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+        background-color: var(--main-bg-color);
+        
+        .project-info {
+            display: grid;
         }
     }
 }
 
-.project {
-    &:hover {
-        .project-info {
-        display: grid;
-        }
+.project-description {
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .tech-stack {
+        font-size: 1rem;
     }
 }
 
@@ -60,16 +66,89 @@
     display: grid;
     gap: 5rem;
     display: none;
-
-    .project-links {
-        display: flex;
-        gap: .5rem;
-        justify-content: center;
-    }
+    justify-items: center;
 
     .project-link {
         background-color: #fff;
         padding: .8rem 1rem;
         display: block;
+        border: 0;
+        max-width: fit-content;
+    }
+}
+
+.project-more {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1000;
+    display: none;
+    grid-template-rows: 1.5fr 1fr;
+    justify-content: center;
+
+    > * {
+        width: 50vw;
+    }
+
+    .project-images {
+        background-color: var(--main-bg-color);
+        background-size: cover;
+        background-position: center;
+        border-bottom: 2px solid black;
+        padding: 2rem;
+        position: relative;
+
+        i {
+            color: #fff;
+            font-size: 2rem;
+            background-color: rgba(0, 0, 0, .3);
+            padding: .6rem 1rem;
+            position: absolute;
+        }
+
+        .close {
+            right: 0;
+            top: 0;
+        }
+
+        .fa-chevron-left {
+            left: 0;
+            bottom: 0;
+        }
+
+        .fa-chevron-right {
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    .project-xtra {
+        background-color: #fff;
+        padding: 1rem 2rem;
+        display: grid;
+        gap: .5rem;
+
+        h1 {
+            font-weight: 700;
+        }
+
+        .tech-stack {
+            font-weight: 500;
+            border-bottom: 1px solid rgba(0, 0, 0, .4);
+            padding-bottom: .5rem;
+        }
+
+        .live-url {
+            background-color: black;
+            color: #fff;
+            padding: .7rem 1rem;
+            width: fit-content;
+            margin-top: 1rem;
+
+            &:hover {
+                background-color: var(--main-bg-color);
+                color: #000;
+            }
+        }
     }
 }

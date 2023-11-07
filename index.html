@@ -16,12 +16,12 @@
 </head>
 <body>
     <div class="container">
-        <section id="top" class="hero">
+        <section id="top" class="section hero mains">
             <main class="center-content">
                 <div class="main__text">
                     <h1 class="text-center">Hello, I'm <span class="text-700">Jubril Abdulsalam</span>.<br>
                         <span class="nxt-line">I'm a frontend web developer</span></h1>
-                    <a class="button" href="#portfolio">View my work<i class="fa-solid fa-arrow-right"></i></a>
+                    <a class="button" href="#projects">View my work<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </main>
             <nav class="nav-bar">
@@ -31,16 +31,17 @@
                     <a href="#about">ABOUT</a>
                     <a href="#portfolio">PORTFOLIO</a>
                     <a href="#blog">BLOG</a>
-                    <a href="#contact">CONTACT</a>  
+                    <a href="#contact">CONTACT</a>
+                    <button class="change-bg"><i class="fas fa-moon"></i></button>
                 </ul>
                 <div class="mobile-nav">
                     <i class="mobile-nav-icon fa-solid fa-bars"></i>
                 </div>
             </nav>
         </section>
-        <div class="about-wrapper">
+        <div id="about" class="section about-wrapper mains">
             <section class="about padding-920px">
-                <h2 id="about">ABOUT</h2>
+                <h2>ABOUT</h2>
                 <div class="about__info">
                     <div class="info info-zoom">
                         <div class="icon-container center-content">
@@ -91,169 +92,46 @@
                 </div>
             </section>
         </div>
-        <div class="project-wrapper">
-            <section class="projects padding-920px">
-                <h2 id="portfolio">PROJECTS</h2>
+        <div id="portfolio" class="section project-wrapper mains">
+            <section id="projects" class="projects padding-920px">
+                <h2>PROJECTS</h2>
                 <ul class="nav-buttons">
                     <li><button class="active">ALL</button></li>
-                    <li><button>FLASK</button></li>
-                    <li><button>REACT</button></li>
+                    <li><button>RUBY/RAILS</button></li>
+                    <li><button>REACT-JS</button></li>
                     <li><button>JAVASCRIPT</button></li>
                 </ul>
+                <div class="project-more">
+                    <div class="project-images">
+                        <i class="fa-solid fa-xmark close"></i>
+                        <i class="fas fa-chevron-left prev"></i>
+                        <i class="fas fa-chevron-right next"></i>
+                    </div>
+                    <div class="project-xtra">
+                    </div>
+                </div>
                 <div class="projects-container">
-                    <div class="project center-content">
-                        <div class="project-info">
-                            <div class="project-description">
-                                <h3>BG CLothing About</h3>
-                                <p>Project stack</p>
-                            </div>
-                            <div class="project-links">
-                                <a href="" class="project-link">Visit Repo</a>
-                                <a href="" class="project-link">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project center-content">
-                        <div class="project-info">
-                            <div class="project-description">
-                                <h3>Project Name</h3>
-                                <p>Project stack</p>
-                            </div>
-                            <div class="project-links">
-                                <a href="" class="project-link">Visit Repo</a>
-                                <a href="" class="project-link">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project center-content">
-                        <div class="project-info">
-                            <div class="project-description">
-                                <h3>Project Name</h3>
-                                <p>Project stack</p>
-                            </div>
-                            <div class="project-links">
-                                <a href="" class="project-link">Visit Repo</a>
-                                <a href="" class="project-link">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project center-content">
-                        <div class="project-info">
-                            <div class="project-description">
-                                <h3>Project Name</h3>
-                                <p>Project stack</p>
-                            </div>
-                            <div class="project-links">
-                                <a href="" class="project-link">Visit Repo</a>
-                                <a href="" class="project-link">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project center-content">
-                        <div class="project-info">
-                            <div class="project-description">
-                                <h3>Project Name</h3>
-                                <p>Project stack</p>
-                            </div>
-                            <div class="project-links">
-                                <a href="" class="project-link">Visit Repo</a>
-                                <a href="" class="project-link">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project center-content">
-                        <div class="project-info">
-                            <div class="project-description">
-                                <h3>Project Name</h3>
-                                <p>Project stack</p>
-                            </div>
-                            <div class="project-links">
-                                <a href="" class="project-link">Visit Repo</a>
-                                <a href="" class="project-link">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project center-content">
-                        <div class="project-info">
-                            <div class="project-description">
-                                <h3>Project Name</h3>
-                                <p>Project stack</p>
-                            </div>
-                            <div class="project-links">
-                                <a href="" class="project-link">Visit Repo</a>
-                                <a href="" class="project-link">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project center-content">
-                        <div class="project-info">
-                            <div class="project-description">
-                                <h3>Project Name</h3>
-                                <p>Project stack</p>
-                            </div>
-                            <div class="project-links">
-                                <a href="" class="project-link">Visit Repo</a>
-                                <a href="" class="project-link">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project center-content">
-                        <div class="project-info">
-                            <div class="project-description">
-                                <h3>Project Name</h3>
-                                <p>Project stack</p>
-                            </div>
-                            <div class="project-links">
-                                <a href="" class="project-link">Visit Repo</a>
-                                <a href="" class="project-link">Live Site</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
         </div>
-        <div id="blog" class="blog-wrapper">
+        <div id="blog" class="section blog-wrapper mains">
             <section class="blog-section padding-920px">
                 <h2>BLOG</h2>
                 <div class="blogs">
-                    <div class="blog">
-                        <div class="blog__image"></div>
-                        <h3>Breaking Your Coder's Block</h3>
-                        <p class="date">APRIL 29, 2023</p>
-                        <p>At one time or another, as a developer. we've all found ourselves hopelessly stuck on a coding issue ...</p>
-                    </div>
-                    <div class="blog">
-                        <div class="blog__image"></div>
-                        <h3>Breaking Your Coder's Block</h3>
-                        <p class="date">APRIL 29, 2023</p>
-                        <p>At one time or another, as a developer. we've all found ourselves hopelessly stuck on a coding issue ...</p>
-                    </div>
-                    <div class="blog">
-                        <div class="blog__image"></div>
-                        <h3>Breaking Your Coder's Block</h3>
-                        <p class="date">APRIL 29, 2023</p>
-                        <p>At one time or another, as a developer. we've all found ourselves hopelessly stuck on a coding issue ...</p>
-                    </div>
-                    <div class="blog">
-                        <div class="blog__image"></div>
-                        <h3>Breaking Your Coder's Block</h3>
-                        <p class="date">APRIL 29, 2023</p>
-                        <p>At one time or another, as a developer. we've all found ourselves hopelessly stuck on a coding issue ...</p>
-                    </div>
                 </div>
             </section>
         </div>
-        <div id="contact" class="contact-wrapper">
+        <div id="contact" class="section contact-wrapper mains">
             <section class="contact-section padding-920px">
                 <h2>CONTACT</h2>
                 <p> Have a question or want to work together?
                 </p>
-                <form class="contact-form">
+                <form action="https://formspree.io/f/xdorjnlv" method="post" class="contact-form">
                     <label for="name">
-                        <input name="name" type="text" placeholder="Name">
+                        <input id="name" name="name" type="text" placeholder="Name" required>
                     </label>
                     <label for="email">
-                        <input name="email" type="email" placeholder="Enter email">
+                        <input id="email" name="email" type="email" placeholder="Enter email" required>
                     </label>
                     <textarea name="meassage" id="message" placeholder="Type Your Message ...."></textarea>
                     <input type="submit" value="SUBMIT">

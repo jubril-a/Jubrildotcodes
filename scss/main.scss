@@ -7,6 +7,10 @@
 @use "message";
 @use "footer";
 
+:root {
+    --main-bg-color: yellow;
+}
+
 h1 {
     font-weight: 200;
     font-size: clamp(1.5rem, calc(-0.05rem + 3.5vw), 2.5rem);

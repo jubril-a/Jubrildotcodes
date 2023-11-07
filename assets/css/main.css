@@ -43,6 +43,10 @@ a {
   align-items: center;
 }
 
+.mb-100 {
+  margin-block: 0.5rem;
+}
+
 /*.button {
     padding: 5px;
     border: 2px solid black;
@@ -51,7 +55,7 @@ a {
 .hero {
   width: 100vw;
   height: 100vh;
-  background-color: yellow;
+  background-color: var(--main-bg-color);
   display: flex;
   flex-direction: column;
 }
@@ -118,7 +122,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100vw;
-  border-bottom: 4px solid yellow;
+  border-bottom: 4px solid;
   z-index: 100;
 }
 
@@ -142,12 +146,24 @@ nav {
   transition: color 1s ease;
 }
 .primary-navigation a:hover {
-  color: yellow;
+  color: var(--main-bg-color);
+}
+.primary-navigation a.active {
+  color: var(--main-bg-color);
 }
 @media (max-width: 57rem) {
   .primary-navigation {
     display: none;
   }
+}
+
+.change-bg {
+  background-color: transparent;
+  border: 0;
+}
+.change-bg i {
+  color: var(--main-bg-color);
+  font-size: 1.5rem;
 }
 
 .expanded {
@@ -229,7 +245,7 @@ h2 {
   width: 8rem;
   height: 8rem;
   border-radius: 4rem;
-  background-color: yellow;
+  background-color: var(--main-bg-color);
 }
 .about .icon-container * {
   font-size: 3rem;
@@ -257,18 +273,18 @@ h2 {
 .me__skills {
   width: 100%;
   height: 100%;
-  background-color: yellow;
+  background-color: var(--main-bg-color);
 }
 
 .me__image {
   width: min(100%, 320px);
   aspect-ratio: 1/1;
   border-radius: 160px;
-  background-color: yellow;
+  background-color: var(--main-bg-color);
 }
 
 .project-wrapper {
-  background-color: aliceblue;
+  background-color: hsl(210deg, 40%, 90%);
 }
 
 .projects {
@@ -290,7 +306,7 @@ h2 {
   border: 0;
 }
 .nav-buttons button.active {
-  background-color: yellow;
+  background-color: var(--main-bg-color);
   padding: 0.7rem 2.2rem;
 }
 
@@ -302,15 +318,23 @@ h2 {
   height: 320px;
   flex: 1 0 min(320px, 100%);
 }
-.projects-container .project:nth-child(odd) {
-  background-color: yellow;
-}
-.projects-container .project:nth-child(even) {
-  background-color: rgb(149, 149, 22);
-}
 
+.project {
+  background-size: cover;
+  background-position: center;
+}
+.project:hover {
+  background-color: var(--main-bg-color);
+}
 .project:hover .project-info {
   display: grid;
+}
+
+.project-description h3 {
+  font-size: 1.2rem;
+}
+.project-description .tech-stack {
+  font-size: 1rem;
 }
 
 .project-info {
@@ -318,24 +342,94 @@ h2 {
   display: grid;
   gap: 5rem;
   display: none;
-}
-.project-info .project-links {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
+  justify-items: center;
 }
 .project-info .project-link {
   background-color: #fff;
   padding: 0.8rem 1rem;
   display: block;
+  border: 0;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.project-more {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: none;
+  grid-template-rows: 1.5fr 1fr;
+  justify-content: center;
+}
+.project-more > * {
+  width: 50vw;
+}
+.project-more .project-images {
+  background-color: var(--main-bg-color);
+  background-size: cover;
+  background-position: center;
+  border-bottom: 2px solid black;
+  padding: 2rem;
+  position: relative;
+}
+.project-more .project-images i {
+  color: #fff;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.6rem 1rem;
+  position: absolute;
+}
+.project-more .project-images .close {
+  right: 0;
+  top: 0;
+}
+.project-more .project-images .fa-chevron-left {
+  left: 0;
+  bottom: 0;
+}
+.project-more .project-images .fa-chevron-right {
+  right: 0;
+  bottom: 0;
+}
+.project-more .project-xtra {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.project-more .project-xtra h1 {
+  font-weight: 700;
+}
+.project-more .project-xtra .tech-stack {
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  padding-bottom: 0.5rem;
+}
+.project-more .project-xtra .live-url {
+  background-color: black;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1rem;
+}
+.project-more .project-xtra .live-url:hover {
+  background-color: var(--main-bg-color);
+  color: #000;
 }
 
 .blogs {
-  padding: 2rem;
-  gap: 2rem;
+  padding-block: 2rem;
+  gap: 1.5rem;
   display: grid;
   margin: auto;
   justify-items: center;
+}
+.blogs:hover .blog:not(.blog:hover) {
+  opacity: 0.5;
 }
 @media (min-width: 720px) and (max-width: 1120px) {
   .blogs {
@@ -351,14 +445,26 @@ h2 {
 }
 .blogs .blog {
   max-width: 320px;
+  transition: opacity 0.5s ease;
+  position: relative;
+}
+.blogs .blog:hover h3 {
+  color: rgb(18, 153, 153);
+}
+.blogs .blog h3 {
+  font-size: 1.2rem;
 }
 .blogs .blog__image {
   width: 100%;
   height: 180px;
   background-color: yellow;
+  background-position: center;
   margin-bottom: 1rem;
-  background-image: url("/assets/images/blog-1.jpg");
   background-size: cover;
+}
+.blogs .blog__link {
+  position: absolute;
+  inset: 0;
 }
 
 .contact-wrapper {
@@ -409,7 +515,7 @@ h2 {
 
 footer {
   padding: 5rem 2rem 2rem;
-  background-color: yellow;
+  background-color: var(--main-bg-color);
   display: grid;
   gap: 2rem;
   justify-items: center;
@@ -434,6 +540,10 @@ footer .to-top {
   background-color: #000;
   color: aqua;
   font-size: 1.5rem;
+}
+
+:root {
+  --main-bg-color: yellow;
 }
 
 h1 {
