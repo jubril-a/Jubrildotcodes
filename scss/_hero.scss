@@ -102,6 +102,10 @@ nav {
         &:hover {
             color: var(--main-bg-color);
         }
+
+        &.active {
+            color: var(--main-bg-color);
+        }
     }
 
     @media (max-width: 57rem) {

@@ -21,14 +21,14 @@
                 <div class="main__text">
                     <h1 class="text-center">Hello, I'm <span class="text-700">Jubril Abdulsalam</span>.<br>
                         <span class="nxt-line">I'm a frontend web developer</span></h1>
-                    <a class="button" href="#portfolio">View my work<i class="fa-solid fa-arrow-right"></i></a>
+                    <a class="button" href="#projects">View my work<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </main>
             <nav class="nav-bar">
                 <p class="logo text-200"><span class="text-700">Jubril</span>.codes</p>
                 <ul class="primary-navigation">
                     <a href="#top">HOME</a>
-                    <a class="Hello" href="#about">ABOUT</a>
+                    <a href="#about">ABOUT</a>
                     <a href="#portfolio">PORTFOLIO</a>
                     <a href="#blog">BLOG</a>
                     <a href="#contact">CONTACT</a>
@@ -93,7 +93,7 @@
             </section>
         </div>
         <div id="portfolio" class="section project-wrapper mains">
-            <section class="projects padding-920px">
+            <section id="projects" class="projects padding-920px">
                 <h2>PROJECTS</h2>
                 <ul class="nav-buttons">
                     <li><button class="active">ALL</button></li>
@@ -128,10 +128,10 @@
                 </p>
                 <form action="https://formspree.io/f/xdorjnlv" method="post" class="contact-form">
                     <label for="name">
-                        <input name="name" type="text" placeholder="Name" required>
+                        <input id="name" name="name" type="text" placeholder="Name" required>
                     </label>
                     <label for="email">
-                        <input name="email" type="email" placeholder="Enter email" required>
+                        <input id="email" name="email" type="email" placeholder="Enter email" required>
                     </label>
                     <textarea name="meassage" id="message" placeholder="Type Your Message ...."></textarea>
                     <input type="submit" value="SUBMIT">

@@ -3,6 +3,7 @@ let mobileNav = document.querySelector('.mobile-nav');
 let mobileNavIcon = document.querySelector('.mobile-nav-icon');
 let primaryNav = document.querySelector('.primary-navigation');
 let mainSections = document.querySelectorAll(".mains");
+let navLinks = document.querySelectorAll(".primary-navigation a");
 
 mobileNav.addEventListener('click', () => {
     if (primaryNav.classList.contains('expanded')) {
@@ -31,14 +32,18 @@ function setNavPosition() {
 window.addEventListener('scroll', setNavPosition);
 window.addEventListener('load', setNavPosition);
 
-/*mainSections.forEach((section) => {
+mainSections.forEach((section) => {
     window.addEventListener('scroll', () => {
-        if ((section.getBoundingClientRect().top >= 1) &&
-        (section.getBoundingClientRect().bottom > 1)) {
-            alert(section.id);
+        let sectionLink = document.querySelector(`[href="#${section.id}"]`); 
+        let sectionPos = section.getBoundingClientRect();
+        let current = document.querySelector('.active');
+
+        if (sectionPos.top < window.innerHeight && sectionPos.top >= 0) {
+            current.classList.remove('active')
+            sectionLink.classList.add('active')
         }
-    })
-})*/
+    })    
+})
 
 let sectionHeadings = document.querySelectorAll("h2");
 let infos = document.querySelectorAll("info-zoom");
@@ -317,7 +322,6 @@ for (let blog in blogs) {
 
 let blogImages = document.querySelectorAll(".blog__image");
 
-console.log(blogImages)
 for (let blogImage of blogImages) {
     let blog = blogImage.id;
     blogImage.style.backgroundImage = `url('assets/images/blogs/${blogs[blog]["image"]}')`;

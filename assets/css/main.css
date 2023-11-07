@@ -148,6 +148,9 @@ nav {
 .primary-navigation a:hover {
   color: var(--main-bg-color);
 }
+.primary-navigation a.active {
+  color: var(--main-bg-color);
+}
 @media (max-width: 57rem) {
   .primary-navigation {
     display: none;
